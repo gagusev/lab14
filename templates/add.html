@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add product</title>
+</head>
+
+<body>
+    <h1>Product creation form:</h1>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        Set type: {{ form.prod_type }} <br>
+        Set name: {{ form.name }} <br>
+        Set information: {{ form.info }} <br>
+        Set manufacturer: {{ form.manufacturer }} <br>
+        Set price: {{ form.price }} <br>
+        * only external URLs are accepted at the moments :( <br>
+        Set picture: {{ form.pic }} <br>
+        {{ form.submit }}
+    </form>
+</body>
+
+</html>

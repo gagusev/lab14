@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add product</title>
+</head>
+
+<body>
+    <h1>All listed products:</h1>
+
+    {% for product in products %}
+        <img src={{product.pic}}> <br>
+        <strong>{{ product.name }}</strong> <br>
+        {{product.prod_type}} <br>
+        {{product.info}} <br>
+        {{product.manufacturer}} <br>
+        <strong>{{product.price}}₽</strong> <br>
+        <br>
+    {% endfor %}
+</body>
+
+</html>

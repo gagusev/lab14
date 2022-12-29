@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+
+<body>
+    <h1>Register Page</h1>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.email }}
+        <br>
+        {{ form.password }}
+        {{ form.re_password }}
+        {{ form.submit }}
+    </form>
+
+    {% for field in form.errors %}
+        Errors occurred in {{form[field].label}}:
+        <ul style="color:red">
+    {% for error in form.errors[field] %}
+
+            <li>{{error}}</li>
+
+    {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <br>
+
+    <a href="{{ url_for('login') }}">Already have an account? Log In</a>
+</body>
+
+</html>
